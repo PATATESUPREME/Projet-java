@@ -1,3 +1,6 @@
+/**
+ * @Class ComposantAlimentaire.java
+ */
 package alimentation.composant;
 
 import alimentation.util.Masse;

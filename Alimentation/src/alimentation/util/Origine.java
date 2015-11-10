@@ -1,3 +1,6 @@
+/**
+ * @Class Origine.java
+ */
 package alimentation.util;
 
 /**

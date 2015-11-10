@@ -1,3 +1,6 @@
+/**
+ * @Class Proteine.java
+ */
 package alimentation.composant;
 
 /**

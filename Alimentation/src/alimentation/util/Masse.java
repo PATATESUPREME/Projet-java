@@ -1,3 +1,6 @@
+/**
+ * @Class Masse.java
+ */
 package alimentation.util;
 
 /**

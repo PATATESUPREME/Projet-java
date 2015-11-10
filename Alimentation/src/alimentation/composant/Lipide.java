@@ -1,3 +1,6 @@
+/**
+ * @Class Lipide.java
+ */
 package alimentation.composant;
 
 /**

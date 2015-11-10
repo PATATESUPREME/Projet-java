@@ -1,3 +1,6 @@
+/**
+ * @Class MasseImpl.java
+ */
 package alimentation.util;
 
 /**
@@ -8,6 +11,10 @@ package alimentation.util;
 public class MasseImpl implements Masse{
 	private float masse;
 	
+	/**
+	 * Constructeur d'objet MasseImpl
+	 * @param masse
+	 */
 	public MasseImpl(float masse) {
 		if (masse < 0.0F){
 			throw new IllegalArgumentException("masse < 0");
@@ -15,6 +22,10 @@ public class MasseImpl implements Masse{
 		this.masse = masse;
 	}
 	
+	/**
+	 * Getteur de masse
+	 * @return masse
+	 */
 	@Override
 	public float getMasse() {
 		return this.masse;
