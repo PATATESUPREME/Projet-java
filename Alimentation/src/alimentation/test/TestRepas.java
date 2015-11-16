@@ -1,6 +1,3 @@
-/**
- * @Class TestRepas.java
- */
 package alimentation.test;
 
 import alimentation.composant.Glucide;
@@ -13,7 +10,7 @@ import alimentation.util.Origine;
 /**
  * @author Kévin DESSIMOULIE
  * @author Baptiste BOISMORAND
- *
+ * @Class TestRepas.java
  */
 public class TestRepas {
 
@@ -22,6 +19,9 @@ public class TestRepas {
 	 */
 	public static void main(String[] args) {
 
+		/*
+		 * Déclaration des ProduitAlimentaire et du Repas 
+		 */
 		ProduitAlimentaire steakHache150Grammes = new ProduitAlimentaire(Origine.ANIMAl, 
 				new Proteine(27.0F), new Lipide(8.0F), new Glucide(0.0F));
 		ProduitAlimentaire oeuf = new ProduitAlimentaire(Origine.ANIMAl, 
@@ -36,6 +36,9 @@ public class TestRepas {
 				new Proteine(14.0F), new Lipide(4.4F), new Glucide(154.0F));
 		Repas repas = new Repas();
 		
+		/*
+		 * Ajout des ProduitAlimentaire au Repas
+		 */
 		repas.ajouterProduitAlimentaire(steakHache150Grammes, 3);
 		repas.ajouterProduitAlimentaire(oeuf, 6);
 		repas.ajouterProduitAlimentaire(carottesRapees100Grammes, 10);
@@ -43,6 +46,9 @@ public class TestRepas {
 		repas.ajouterProduitAlimentaire(laitEcreme200Grammes, 5);
 		repas.ajouterProduitAlimentaire(rizComplet200Grammes, 5);
 		
+		/*
+		 * Affichage des Kcal totales et des Kcal d'Origine Vegetal
+		 */
 		System.out.println("Kcal total : "+repas.calculerKcalTotal()+", Kcal d'origine vegetal : "+repas.calculerKcalOrigineVegetalTotal());
 
 	}

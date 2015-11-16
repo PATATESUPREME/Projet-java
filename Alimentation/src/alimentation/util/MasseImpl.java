@@ -1,14 +1,15 @@
-/**
- * @Class MasseImpl.java
- */
 package alimentation.util;
 
 /**
  * @author Kévin DESSIMOULIE
  * @author Baptiste BOISMORAND
- *
+ * @Class MasseImpl.java
  */
 public class MasseImpl implements Masse{
+	
+	/*
+	 * Variables
+	 */
 	private float masse;
 	
 	/**
