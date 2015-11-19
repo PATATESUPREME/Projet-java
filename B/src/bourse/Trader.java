@@ -17,8 +17,17 @@ public class Trader implements Comparable<Trader>{
 	private final String nom;
 	private final String ville;
 	private List<Transaction> transactions;
+	
+	/**
+	 * Constructeur d'objet Trader
+	 * @param identifiant
+	 * @param nom
+	 * @param ville
+	 */
 	public Trader(String identifiant, String nom, String ville) {
-		
+		if(!identifiant.matches(PATTERN_IDENTIFIANT)){
+			throw new IllegalArgumentException("nom!=[A-Z,1-9]{1}");
+		}
 		if(nom==null){
 			throw new NullPointerException("nom non null");
 		}
@@ -37,11 +46,17 @@ public class Trader implements Comparable<Trader>{
 		this.transactions=new ArrayList<>();
 	}
 	
+	/**
+	 * Redéfinition de la méthode hashCode
+	 */
 	@Override
 	public int hashCode() {
 		return this.identifiant.hashCode();
 	}
 
+	/**
+	 * Redéfinition de la méthode equals
+	 */
 	@Override
 	public boolean equals(Object o) {
 		if (this == o){
@@ -54,33 +69,60 @@ public class Trader implements Comparable<Trader>{
 		return identifiant.equals(other.identifiant);
 	}
 
+	/**
+	 * Implémentation de compareTo
+	 */
 	@Override
 	public int compareTo(Trader trader) {
 		return this.identifiant.compareTo(trader.identifiant);
 	}
 
+	/**
+	 * Getteur d'identifiant
+	 * @return identifiant
+	 */
 	public String getIdentifiant() {
 		return identifiant;
 	}
 
+	/**
+	 * Getteur de nom
+	 * @return nom
+	 */
 	public String getNom() {
 		return nom;
 	}
 
+	/**
+	 * Getteur de ville
+	 * @return ville
+	 */
 	public String getVille() {
 		return ville;
 	}
 	
+	/**
+	 * Getteur de liste de Transaction
+	 * @return List<Transaction>
+	 */
 	public List<Transaction> getTransaction(){
 		return Collections.unmodifiableList(this.transactions);
 	}
 
+	/**
+	 * Redéfinition du toString
+	 * @return String
+	 */
 	@Override
 	public String toString() {
 		return "Trader [identifiant=" + identifiant + ", nom=" + nom + ", ville=" + ville + ", transactions="
 				+ transactions + "]";
 	}
 	
+	/**
+	 * Méthode d'ajout de Transaction
+	 * @param transaction
+	 */
 	public void addTransaction(Transaction transaction){
 		if(transaction==null){
 			throw new NullPointerException("transaction non null");

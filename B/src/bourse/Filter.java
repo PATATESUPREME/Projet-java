@@ -11,9 +11,15 @@ import java.util.List;
  */
 public class Filter<T> {
 
-	public List<T> filter(List<T> traders, Predicat<T> predicat) {
+	/**
+	 * Méthode filtrant une liste
+	 * @param traders
+	 * @param predicat
+	 * @return List<T>
+	 */
+	public List<T> filter(List<T> liste, Predicat<T> predicat) {
 		List<T> result = new ArrayList<T>();
-		for(final T t : traders) {
+		for(final T t : liste) {
 			if(predicat.test(t)) {
 				result.add(t);
 			}

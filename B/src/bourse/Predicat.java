@@ -9,7 +9,7 @@ package bourse;
 public interface Predicat<T> {
 	
 	/**
-	 * Test
+	 * Méthode de test
 	 * @param t
 	 * @return Boolean
 	 */
