@@ -1,4 +1,4 @@
-package exo7;
+package fr.unilim.iut.a15.s3.m3105.g5b.tp3.exo7.boismorand_dessimoulie;
 
 import java.util.List;
 
@@ -20,6 +20,10 @@ public class Producer implements Runnable {
 	
 	@Override
 	public void run(){
+		
+	}
+	
+	public void produce(){
 		
 	}
 }
